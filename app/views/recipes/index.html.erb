@@ -1,5 +1,4 @@
-<h1>All Recipes</h1>
-<hr/>
+<%= render 'shared/page_title', title: "All Recipes" %>
 
 <% @recipes.each do |recipe| %>
 
@@ -13,12 +12,16 @@
     </div>
   
   
-    <div class = "col-md-8 well">
+    <div class = "col-md-6 well">
          <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
          <p><%= recipe.summary %></p> 
          <p>
            <span class = "quiet"><small>Created <%= time_ago_in_words(recipe.created_at) %> ago.</small></span>
          </p>
+    </div>
+
+    <div class="col-md-4">
+      <%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture? %>
     </div>
     
   </div>
