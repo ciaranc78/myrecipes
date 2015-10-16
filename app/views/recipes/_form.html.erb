@@ -15,8 +15,13 @@
         <span class="picture">
           <%=f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
         </span>
+        <div class="col-md-6">
+          <%= f.submit(@recipe.new_record? ? 'Create Recipe' : 'Edit Recipe', class: "btn btn-success") %>
+        </div>
+        <div class="col-md-6">
+          <%= link_to 'Cancel',recipes_path, class: "btn btn-warning btn-cancel" %>
+        </div>
         
-        <%= f.submit(@recipe.new_record? ? 'Create Recipe' : 'Edit Recipe', class: "btn btn-success") %>
       <% end %>
       
     </div>
