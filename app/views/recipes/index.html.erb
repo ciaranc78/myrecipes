@@ -8,7 +8,7 @@
     
     <div class = "col-md-2">
       <section class = "chef-info center">
-        <%= gravatar_for(recipe.chef, size: 100) %>
+        <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
         <p> Chef Name: <%= recipe.chef.name %></p>
       </section>
     </div>

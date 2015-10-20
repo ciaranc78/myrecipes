@@ -1,0 +1,26 @@
+<%= render 'shared/errors', obj: @chef %>  
+
+<div class = "row">
+    <div class = "well col-md-8 col-md-offset-2">
+      <%= form_for @chef do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+        
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <div class="col-md-6">
+          <%= f.submit(@chef.new_record? ? 'Register' : 'Edit Profile', class: "btn btn-success") %>
+        </div>
+        <div class="col-md-6">
+          <%= link_to 'Cancel',root_path, class: "btn btn-warning btn-cancel" %>
+        </div>
+        
+      <% end %>
+      
+    </div>
+  
+</div>
