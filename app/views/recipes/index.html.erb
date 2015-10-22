@@ -28,8 +28,12 @@
     <div class = "col-md-6 well">
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <p><%= recipe.summary %></p> 
-      <p><small>Styles : </small><%= render recipe.styles %></p>
-      <p><small>Ingredients : </small><%= render recipe.ingredients %></p>
+      <% if recipe.styles.any? %>
+         <p><small>Styles : </small><%= render recipe.styles %></p>
+      <% end %>
+      <% if recipe.ingredients.any? %>
+        <p><small>Ingredients : </small><%= render recipe.ingredients %></p>
+      <% end %>
 
 
       <p>
