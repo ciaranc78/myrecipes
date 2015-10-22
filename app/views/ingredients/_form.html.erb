@@ -1,0 +1,21 @@
+<%= render 'shared/errors', obj: @ingredient %>  
+
+<div class = "row">
+    <div class = "well col-md-8 col-md-offset-2">
+      <%= form_for @ingredient do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        
+        
+        <div class="col-md-6">
+          <%= f.submit(@ingredient.new_record? ? 'Create Ingredient' : 'Edit Style', class: "btn btn-success") %>
+        </div>
+        <div class="col-md-6">
+          <%= link_to 'Cancel',recipes_path, class: "btn btn-warning btn-cancel" %>
+        </div>
+        
+      <% end %>
+      
+    </div>
+  
+</div>

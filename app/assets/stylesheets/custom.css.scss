@@ -22,8 +22,14 @@
     
     margin-top: 20px;
     margin-bottom: 10px;
-    margin-left: 40px;
+    padding-left: 25px;
     float: left;
+}
+.nav-item-ul {
+    padding-left: 25px;
+    float: left;
+    margin-top:20px;
+    list-style-type: none;
 }
 
 .center {
@@ -108,3 +114,6 @@ span.picture {
     width: 100%;
 }
 
+.no-bullet {
+    list-style-type: none;
+}
